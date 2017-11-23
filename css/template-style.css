@@ -139,6 +139,9 @@ p.logo strong {
 	padding: 10px 20px;
 	width: 100%;
 }
+#carousel .owl-wrapper .owl-item img {
+  height: 30em;
+}
 #carousel .owl-theme .owl-controls {
 	background: none repeat scroll 0 0 rgba(0, 40, 58, 0.53);
 	bottom: 0;
@@ -301,7 +304,7 @@ h2.section-title {
 	text-align: center;
 	text-transform: uppercase;
 }
-#our-work {
+#pricing {
 	background: none repeat scroll 0 0 #fff;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 	padding: 6em 2em;
