@@ -515,7 +515,11 @@ footer p, footer a:visited, footer a, footer a:hover {
   }
   #carousel .text {
   	font-size: 0.8em;
-  	top: 20%;
+    position: relative;
+    top: -45px;
+  }
+  #carousel .text h2, #carousel .text p {
+    max-width: 100%;
   }
   .owl-controls.clickable {
   	display: none!important;
