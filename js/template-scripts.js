@@ -1,8 +1,8 @@
 jQuery(document).ready(function($) {
   // One page navigation
   var lastId,
+      headerHeight = $('header').outerHeight(),
       topMenu = $(".top-nav"),
-      topMenuHeight = topMenu.outerHeight() + 15,
       menuItems = topMenu.find("a"),
       scrollItems = menuItems.map(function() {
           var item = $($(this).attr("href"));
@@ -12,14 +12,15 @@ jQuery(document).ready(function($) {
       });
   menuItems.click(function(e) {
       var href = $(this).attr("href"),
-          offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+          offsetTop = href === "#" ? 0 : $(href).offset().top + 1 - headerHeight;
       $('html, body').stop().animate({
           scrollTop: offsetTop
       }, 300);
+      $('.top-nav > ul').toggleClass('show-menu', 'slow');
       e.preventDefault();
   });
   $(window).scroll(function() {
-      var fromTop = $(this).scrollTop() + topMenuHeight;
+      var fromTop = $(this).scrollTop() + headerHeight + 1;
       var cur = scrollItems.map(function() {
           if ($(this).offset().top < fromTop)
               return this;
@@ -34,4 +35,6 @@ jQuery(document).ready(function($) {
               .end().filter("[href=#" + id + "]").parent().addClass("active-item");
       }
   });
+  // Offset Section by height of header
+  $("section").css('padding-top',headerHeight);
 });  

@@ -72,6 +72,9 @@ header {
 	width: 100%;
 	z-index: 10;
 }
+div.logo {
+  text-align: center;
+}
 p.logo {
 	color: #fff;
 	font-size: 1.7em;
@@ -105,7 +108,7 @@ p.logo strong {
 #carousel .text {
 	position: absolute;
 	top: 40%;
-	z-index: 10;
+	z-index: 0;
 }
 .item {
 	overflow: hidden;
@@ -120,6 +123,9 @@ p.logo strong {
 	margin-right: 1px;
 	text-align: center;
 	width: 30px;
+}
+#carousel {
+  background-color: #fff;
 }
 #carousel .text h2 {
 	background: none repeat scroll 0 0 rgba(146, 197, 0, 0.8);
@@ -140,7 +146,7 @@ p.logo strong {
 	width: 100%;
 }
 #carousel .owl-wrapper .owl-item img {
-  height: 30em;
+  height: auto;
 }
 #carousel .owl-theme .owl-controls {
 	background: none repeat scroll 0 0 rgba(0, 40, 58, 0.53);
@@ -466,13 +472,13 @@ form.customform button.color-btn {
 }
 #contact h3 {
 	color: #92c500;
-	font-size: 1em;
+	font-size: 2em;
 	font-weight: 700;
 	margin: 0 0 0.625em;
 	text-transform: uppercase;
 }
 #contact p {
-	font-size: 0.85em;
+	font-size: 1.25em;
 	font-style: normal;
 	line-height: 2em;
 }
@@ -504,9 +510,6 @@ footer p, footer a:visited, footer a, footer a:hover {
 	font-size: 0.8em;
 }
 @media screen and (max-width: 768px) {
-  header {
-  	position: relative;
-  }
   .top-nav li a {
   	background: #05374e none repeat scroll 0 0;
   }
